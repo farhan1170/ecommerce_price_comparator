@@ -57,10 +57,8 @@ fi
 # Now that we know there is no old version running, let's start the processes
 
 if [ $NODE_HOT_RELOAD -eq 0 ]; then
-  
     NCMD="pm2 start"
     NCMD="$NCMD $NODE_LAUNCH_SCRIPT "
-fi
 else
     NCMD="nodemon"
     NCMD="$NCMD $NODE_LAUNCH_SCRIPT"
